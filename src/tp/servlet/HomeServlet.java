@@ -49,14 +49,17 @@ public class HomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String myUsername = request.getParameter("username");
+		String myPassword = request.getParameter("password");
+
 		System.out.println(myUsername);
-		if( myUsername.equals("toto")){
+		if (myUsername.equals("toto") && myPassword.equals("tata")) {
 			request.getSession().setAttribute("username", myUsername);
-		}else{
-			
+			request.getSession().setAttribute("password", myPassword);
+		} else {
+
 		}
-				doGet(request, response);
-	
+		doGet(request, response);
+
 	}
 
 }

@@ -12,7 +12,7 @@
 	<form method="POST" action=>
 		<input type="text" name="username">
 		<h2>Mot de passe</h2>
-		<input type="text" name="mot de passe"> <input type="submit" name="ok">
+		<input type="text" name="password"> <input type="submit" name="ok">
 	</form>
 </body>
 </html>
