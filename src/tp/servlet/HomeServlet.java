@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HomeServlet
  */
-@WebServlet("/HomeServlet")
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -37,7 +37,7 @@ public class HomeServlet extends HttpServlet {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 		} else {
 			// J'affiche la page de connexion
-			this.getServletContext().getRequestDispatcher("/WEB-INF/HomeConnexion.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 		}
 	}
 
