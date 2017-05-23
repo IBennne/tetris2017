@@ -49,9 +49,13 @@ public class HomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String myUsername = request.getParameter("username");
-
-		request.getSession().setAttribute("username", myUsername);
-		doGet(request, response);
+		System.out.println(myUsername);
+		if( myUsername.equals("toto")){
+			request.getSession().setAttribute("username", myUsername);
+		}else{
+			
+		}
+				doGet(request, response);
 	
 	}
 
