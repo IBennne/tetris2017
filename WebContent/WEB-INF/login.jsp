@@ -11,7 +11,6 @@
 	<h2>nom d'utilisateur</h2>
 	<form method="POST" action=>
 		<input type="text" name="username">
-		<input type="submit" value="se connecter">
 		<h2>Mot de passe</h2>
 		<input type="text" name="mot de passe"> <input type="submit"
 			name="ok">

@@ -9,6 +9,8 @@
 </head>
 <body>
 <h1>Bienvenue ${username} !!! </h1>
-
+<br>
+<form method
+<input type="submit" value="se déconnecter">
 </body>
 </html>

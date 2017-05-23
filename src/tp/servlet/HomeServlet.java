@@ -52,6 +52,7 @@ public class HomeServlet extends HttpServlet {
 
 		request.getSession().setAttribute("username", myUsername);
 		doGet(request, response);
+	
 	}
 
 }
