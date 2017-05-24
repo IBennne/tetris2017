@@ -22,6 +22,10 @@ public class TetriminoApplicationDAO {
 	public static List<Tetrimino> findAll() {
 		return new ArrayList<>(tetriminos.values());
 	}
+	
+	public static void delete(Tetrimino tetrimino) {
+		tetriminos.remove(tetrimino.getId());
+	}
 }
 	
 
