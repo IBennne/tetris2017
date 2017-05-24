@@ -12,7 +12,12 @@
 
 <br>
 <form method="POST" action="home">
+<<<<<<< Updated upstream
 <input type="submit" value="se déconnecter">
+=======
+<input type="submit" value="se déconnecter">
+
+>>>>>>> Stashed changes
 </form>
 </body>
 </html>

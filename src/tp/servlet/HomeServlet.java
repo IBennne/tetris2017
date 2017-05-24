@@ -51,16 +51,20 @@ public class HomeServlet extends HttpServlet {
 
 		if (request.getParameter("logout") == null) {
 			request.getSession().invalidate();
-		} else {
-			// TODO Auto-generated method stub
+
+		}else{
+				// TODO Auto-generated method stub
 			String myUsername = request.getParameter("username");
 			String myPassword = request.getParameter("password");
+	
 
 			System.out.println(myUsername);
 			if (myUsername.equals("toto") && myPassword.equals("tata")) {
 				request.getSession().setAttribute("username", myUsername);
 				request.getSession().setAttribute("password", myPassword);
+
 			}
+
 		}
 		doGet(request, response);
 
