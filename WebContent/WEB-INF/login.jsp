@@ -13,7 +13,7 @@
 		<input type="text" name="username">
 		<h2>Mot de passe</h2>
 		<input type="text" name="password"> <input type="submit" name="ok">
-		
+		<input type="hidden" name="logout">
 	</form>
 </body>
 </html>

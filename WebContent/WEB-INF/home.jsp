@@ -13,11 +13,6 @@
 <br>
 <form method="POST" action="home">
 <input type="submit" value="se déconnecter">
-<<<<<<< Updated upstream
-<input type="hidden" name="logout">
-=======
-<input type="hidden" name="logout" value=1>
->>>>>>> Stashed changes
 </form>
 </body>
 </html>

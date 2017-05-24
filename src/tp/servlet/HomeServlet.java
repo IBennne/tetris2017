@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HomeServlet
  */
-//mise a jour
-@WebServlet("/home" )
+// mise a jour
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -49,26 +49,18 @@ public class HomeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
-		if (request.getParameter("logout")==null){
+		if (request.getParameter("logout") == null) {
 			request.getSession().invalidate();
-		}else{
+		} else {
 			// TODO Auto-generated method stub
-		String myUsername = request.getParameter("username");
-		String myPassword = request.getParameter("password");
+			String myUsername = request.getParameter("username");
+			String myPassword = request.getParameter("password");
 
-		System.out.println(myUsername);
-		if (myUsername.equals("toto") && myPassword.equals("tata")) {
-			request.getSession().setAttribute("username", myUsername);
-			request.getSession().setAttribute("password", myPassword);
-		} 
-
-		// TODO Auto-generated method stub
-		String myLogout = request.getParameter("logout");
-
-		if (myLogout != null) {
-			request.getSession().invalidate();
-		} 
+			System.out.println(myUsername);
+			if (myUsername.equals("toto") && myPassword.equals("tata")) {
+				request.getSession().setAttribute("username", myUsername);
+				request.getSession().setAttribute("password", myPassword);
+			}
 		}
 		doGet(request, response);
 
