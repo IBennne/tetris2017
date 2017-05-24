@@ -3,18 +3,20 @@
  */
 package tp.model;
 
+import java.util.UUID;
+
 /**
  * @author benoit
  *
  */
 public class Tetrimino {
-	private String id;
+	private UUID id;
 	private String nom;
 	private String couleur;
 	
 	
 	
-	public Tetrimino(String id, String nom, String couleur) {
+	public Tetrimino(UUID id, String nom, String couleur) {
 		
 		this.id = id;
 		this.nom = nom;
@@ -22,15 +24,15 @@ public class Tetrimino {
 	}
 	public Tetrimino(String nom, String couleur) {
 		
-		this.id = id;
+		
 		this.nom = nom;
 		this.couleur = couleur;
 	}
 	
-	public String getId() {
+	public UUID getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 	public String getNom() {
