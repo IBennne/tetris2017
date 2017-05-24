@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import tp.dao.TetriminoApplicationDAO;
+
 /**
  * Servlet implementation class DeleteTetriminoServlet
  */
@@ -27,7 +29,16 @@ public class DeleteTetriminoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		try{
+		String myTetriminoId = request.getParameter("tetriminoId");
+		
+		TetriminoApplicationDAO.delete(TetriminoApplicationDAO.find(myTetriminoId));
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		response.sendRedirect("tetriminos");
 	}
 
 	/**

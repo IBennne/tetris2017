@@ -26,6 +26,9 @@ public class TetriminoApplicationDAO {
 	public static void delete(Tetrimino tetrimino) {
 		tetriminos.remove(tetrimino.getId());
 	}
+	public static Tetrimino find(String id) {
+		return tetriminos.get(id);
+	}
 }
 	
 
