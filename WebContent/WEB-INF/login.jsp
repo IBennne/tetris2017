@@ -9,10 +9,11 @@
 <body>
 	<br>
 	<h2>nom d'utilisateur</h2>
-	<form method="POST" action=>
+	<form method="POST" >
 		<input type="text" name="username">
 		<h2>Mot de passe</h2>
 		<input type="text" name="password"> <input type="submit" name="ok">
+		
 	</form>
 </body>
 </html>

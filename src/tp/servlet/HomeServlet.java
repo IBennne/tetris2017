@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HomeServlet
  */
-@WebServlet("/home")
+@WebServlet("/home" )
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -47,7 +47,11 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		if (request.getParameter("logout")==null){
+			request.getSession().invalidate();
+		}else{
+			// TODO Auto-generated method stub
 		String myUsername = request.getParameter("username");
 		String myPassword = request.getParameter("password");
 
@@ -55,8 +59,7 @@ public class HomeServlet extends HttpServlet {
 		if (myUsername.equals("toto") && myPassword.equals("tata")) {
 			request.getSession().setAttribute("username", myUsername);
 			request.getSession().setAttribute("password", myPassword);
-		} else {
-
+		} 
 		}
 		doGet(request, response);
 

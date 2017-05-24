@@ -11,8 +11,9 @@
 <h1>Bienvenue ${username} !!! </h1>
 
 <br>
-<form method="POST">
+<form method="POST" action="home">
 <input type="submit" value="se déconnecter">
+<input type="hidden" name="logout">
 </form>
 </body>
 </html>
