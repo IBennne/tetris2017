@@ -48,6 +48,7 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		
 		if (request.getParameter("logout")==null){
 			request.getSession().invalidate();
@@ -60,6 +61,13 @@ public class HomeServlet extends HttpServlet {
 		if (myUsername.equals("toto") && myPassword.equals("tata")) {
 			request.getSession().setAttribute("username", myUsername);
 			request.getSession().setAttribute("password", myPassword);
+		} 
+
+		// TODO Auto-generated method stub
+		String myLogout = request.getParameter("logout");
+
+		if (myLogout != null) {
+			request.getSession().invalidate();
 		} 
 		}
 		doGet(request, response);
